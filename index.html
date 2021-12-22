@@ -5,8 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
 </head>
 <body>
+    $(function(){
+        $(window).on('load',function(){
+          $(".loading-anime-wrap").delay(2000).fadeOut('slow');
+        });
+        function loaderClose(){
+          $(".loading-anime-wrap").fadeOut('slow');
+        }
+        setTimeout(loaderClose,10000);
+     });
+<div class="loading-anime-wrap">
+    <img class="loading-anime-img" src="https://dubdesign.net/wp-content/uploads/2021/05/bluefvsp_logoonly3.svg">
+    <div class="loading-anime-line"></div>
+</div>
+
     <div>DICE AI</div>
 <button type="button" onclick="init()">Start</button>
 <div id="webcam-container"></div>
@@ -75,7 +90,7 @@
             labelContainer.childNodes[0].innerHTML = "UnKnown"
         }
     }
-
+    
 </script>
 </body>
 </html>
