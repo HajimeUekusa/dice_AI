@@ -11,6 +11,10 @@ button{
     background-color: transparent
 }
   
+.button_center{
+    text-align: center;
+}
+
 .startbutton {
     position: relative;
     width: 200px;
